@@ -27,7 +27,7 @@ int main()
 	product_details *product_root = NULL;
 	
 	int ch;
-	
+	system("clear");
 	design() ;
 	printf("Welcome To Auction System\n");
 	design() ;
