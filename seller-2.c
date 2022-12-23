@@ -172,7 +172,7 @@ seller_Details *seller(seller_Details *seller_root_1, product_details *product_r
 							case 1:
 								
 								product_root = product_registration(product_root) ; 
-								printf("product_root %p\n",product_root);
+								//printf("product_root %p\n",product_root);
 								//printf("seller id %d , produt id %d\n",product_root->product_id ,seller_id->id );
 								seller_id->link = get_prodouct_seller_id(product_root , seller_id->id);	
 								break;
