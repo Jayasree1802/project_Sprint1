@@ -39,6 +39,33 @@ seller_Details * login(seller_Details *seller_root )
 		return NULL;
 	}
 }
+seller_Details *login_seller(seller_Details *seller_root,char *user_name , char *pswd)
+{
+	seller_Details *p = seller_root ;
+	
+	
+	
+	int flag = 0 ;
+	while(p != NULL)
+	{
+	
+		if(strcmp(p->name ,user_name) == 0 )
+		{
+			if(strcmp(p->password , pswd )== 0)
+			{
+				flag = 1;
+				return p ;
+			}
+			
+		}
+		
+		p = p->next ; 
+	}
+	
+	if(flag == 0)
+	 return NULL ;
+}
+
 void save_product_info_file(product_details *product_root)
 {
 	product_details *p = product_root  ;
@@ -183,7 +210,6 @@ return seller_root;
 seller_Details *create_lisr_of_seller(seller_Details *source_1 , seller_Details DATA)
 {
 
-	//printf("crete fun source address :%p\n",source_1);
 	
 	static seller_Details *source;
 	source = source_1 ;
@@ -224,32 +250,6 @@ seller_Details *create_lisr_of_seller(seller_Details *source_1 , seller_Details 
 	
 	return source ;	
 	
-}
-seller_Details *login_seller(seller_Details *seller_root,char *user_name , char *pswd)
-{
-	seller_Details *p = seller_root ;
-	
-	
-	
-	int flag = 0 ;
-	while(p != NULL)
-	{
-	
-		if(strcmp(p->name ,user_name) == 0 )
-		{
-			if(strcmp(p->password , pswd )== 0)
-			{
-				flag = 1;
-				return p ;
-			}
-			
-		}
-		
-		p = p->next ; 
-	}
-	
-	if(flag == 0)
-	 return NULL ;
 }
 
 
@@ -379,7 +379,7 @@ seller_Details *file_to_list(seller_Details *seller_root_1)
 					q_data = question_extraction_from_file(buffer , q_data);
 					seller_root = create_lisr_of_seller(seller_root ,q_data );
 					
-					//printf("return add %p\n",seller_root);
+					
 				
 			}
 		}			
@@ -392,7 +392,7 @@ seller_Details *file_to_list(seller_Details *seller_root_1)
 
 seller_Details question_extraction_from_file(char *str , seller_Details q_data)
 {
-	//printf("str recv: %s\n",str);
+	
 	
 	char *piece = NULL;
 	
