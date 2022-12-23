@@ -18,6 +18,11 @@ void display(seller_Details *seller_root)
 	}
 }
 
+/**************************************************************************
+*FUNCTION NAME                :    login
+*DESCRPTION                   :    This function is ued here for log in the seller
+*Return                       :    No return
+***********************************************************************/
 seller_Details * login(seller_Details *seller_root )
 {
 	char seller_name[20] , seller_pswd[20] ;
@@ -39,6 +44,7 @@ seller_Details * login(seller_Details *seller_root )
 		return NULL;
 	}
 }
+
 seller_Details *login_seller(seller_Details *seller_root,char *user_name , char *pswd)
 {
 	seller_Details *p = seller_root ;
@@ -65,7 +71,7 @@ seller_Details *login_seller(seller_Details *seller_root,char *user_name , char 
 	if(flag == 0)
 	 return NULL ;
 }
-
+      
 void save_product_info_file(product_details *product_root)
 {
 	product_details *p = product_root  ;
@@ -116,7 +122,11 @@ product_details *get_prodouct_seller_id(product_details *p , int seller_id)
 		
 		return NULL;
 }
-
+/************************************************************
+*FUNCTION NAME          :    seller
+*DESCRIPTION            :    This function is used here  is a menu driven function for seller registration and log in and then product opertations menu also visible here
+*Result                 :    seller_root
+**************************************************************/ 
 
 seller_Details *seller(seller_Details *seller_root_1, product_details *product_root)
 {
