@@ -13,6 +13,11 @@ void design()
 	printf("\n");
 }
 
+/************************************************************
+*FUNCTION NAME         :    main
+*DESCRIPTION           :    This function used here is the menu drawn function for admin,seller,buyer
+*RETURN                :    No return
+**************************************************************/
 
 int main()
 {
