@@ -4,6 +4,11 @@
 #include"prototype.h"
 #include"buyer_prototype.h"
 
+/****************************************************
+*FUNCTION NAME            :     save_to_file
+*DISCRIPTION              :     This function used here to save the buyer details into the file 
+*RETURN                   :     No return 
+***************************************************/
 void save_to_file(buyer_Details *source)
 {
 	FILE *fptr = NULL ;
@@ -28,6 +33,11 @@ void save_to_file(buyer_Details *source)
 	
 	fclose(fptr);
 }
+/****************************************************
+FUNCTION NAME         :   display_buyer
+DESCRPTION            :   This function used here to display the seller details 
+RETURN                :   No return 
+***************************************************/
 void display_buyer(buyer_Details *source)
 {
 	buyer_Details *p = source  ;
@@ -38,7 +48,8 @@ void display_buyer(buyer_Details *source)
 		p = p->next;
 	}
 }
-
+/*******************************************
+FUNCTION NAME             :      display_product
 
 void display_productlis(seller_Details *seller_root)
 {
@@ -75,7 +86,7 @@ buyer_Details *buyer(buyer_Details *source , seller_Details *seller_root)
 		scanf("%d",&ch);
 		
 		switch(ch)
-		{
+		
 			case 1: 
 				writing_buyer_info_to_file();
 				source = registration_buyer(source);
