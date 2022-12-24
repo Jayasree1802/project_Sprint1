@@ -2,6 +2,7 @@
 #include<stdio.h>
 #define BUFFER_SIZE 1000
 
+//struct Details of seller details
 typedef struct seller_Details
 {
         int id;
@@ -30,6 +31,7 @@ typedef struct seller_Details
         struct seller_Details *next;
 }seller_Details;
 
+//structure for product Details
 typedef struct product_details
 {
 	int product_id ;
