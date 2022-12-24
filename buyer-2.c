@@ -72,7 +72,7 @@ DISCRIPTION         :     This function is used here to show the  menu for the r
 RETURN              :     source
 ******************************************************/
 
-buyer_Details *buyer(buyer_Details *source , seller_Details *seller_root)
+buyer_Details *buyer(buyer_Details *source)
 {
 	int ch , exit_flag = 0 , prod_id = 0 , num = 0; 
 	char buyer_name[30] , buyer_pswd[30] ,choice;
