@@ -3,6 +3,11 @@
 #include"prototype.h"
 #include"buyer_prototype.h"
 
+/******************************************************
+FUNCTION NAME       :        auction_for_product
+DISCRIPTION         :        This function used here  to create a file to store the bidding history 
+RETURN              :        Return Null
+*******************************************************/
 void auction_for_product(product_details *prod_root , seller_Details *seller_root , buyer_Details *buyer_root)
 {
 	seller_Details *sller_id = NULL;
@@ -89,6 +94,11 @@ void auction_for_product(product_details *prod_root , seller_Details *seller_roo
 	
 }
 
+/*****************************************************
+*FUNCTION NAME        :      price _check
+DESCRIPTION           :      This function used here to check the biding price of the buyer
+RETRUN                :      No return type
+****************************************************/
 
 seller_Details * price_check(int  product_id ,int price ,seller_Details *seller_root)
 {
