@@ -4,6 +4,12 @@
 #include"prototype.h"
 #include"buyer_prototype.h"
 
+/********************************************************************************************
+*  FUNCTION NAME      :           display
+*  DESCRIPTION        :           Function to display seller Details 
+*  RETURN TYPE        :           No returns
+**************************************************************************/
+
 void display(seller_Details *seller_root)
 {
 	printf("seller_root:%p\n",seller_root);
@@ -18,11 +24,13 @@ void display(seller_Details *seller_root)
 	}
 }
 
+
 /**************************************************************************
 *FUNCTION NAME                :    login
 *DESCRPTION                   :    This function is ued here for log in the seller
 *Return                       :    No return
 ***********************************************************************/
+
 seller_Details * login(seller_Details *seller_root )
 {
 	char seller_name[20] , seller_pswd[20] ;
@@ -128,6 +136,7 @@ product_details *get_prodouct_seller_id(product_details *p , int seller_id)
 *Result                 :    seller_root
 **************************************************************/ 
 
+
 seller_Details *seller(seller_Details *seller_root_1, product_details *product_root)
 {
 
@@ -150,11 +159,11 @@ seller_Details *seller(seller_Details *seller_root_1, product_details *product_r
 		scanf("%d",&ch);
 		switch(ch)
 		{
-			case 1: 
+			case REGISTRATION: 
 				new_registration_to_file();
 				seller_root = file_to_list(seller_root);
 				break;
-			case 2: 
+			case LOGIN: 
 				seller_id = login(seller_root) ;
 				if(seller_id !=NULL)
 				{
@@ -169,31 +178,30 @@ seller_Details *seller(seller_Details *seller_root_1, product_details *product_r
 						scanf("%d",&ch);
 						switch(ch)
 						{
-							case 1:
+							case PRODUCT_REGISTRATION:
 								
 								product_root = product_registration(product_root) ; 
 								//printf("product_root %p\n",product_root);
 								//printf("seller id %d , produt id %d\n",product_root->product_id ,seller_id->id );
 								seller_id->link = get_prodouct_seller_id(product_root , seller_id->id);	
 								break;
-							case 2:
+							case DELETE_PRODUCTS :
 								printf("enter the product id\n");
 								scanf("%d",&p_id);
-								//printf("sending  %p\n",product_root);
 								product_root = delete_product(product_root ,p_id );
 								save_product_info_file(product_root);
 								seller_id->link = product_root ;
 								break;
-							case 3:
+							case MODIFY_PRODUCTS:
 								printf("enter the product id\n");
 								scanf("%d",&p_id);
 								product_root = modify_product_details(product_root ,p_id,seller_id);
 								save_product_info_file(product_root);
 								seller_id->link = get_prodouct_seller_id(product_root , seller_id->id);
 								break;
-							case 4: display_product(product_root);
+							case DISPLAY_PRODUCTS: display_product(product_root);
 								break ;
-							case 5:
+							case EXIT:
 								exit_flag_1 = 1;
 								break;
 								
@@ -203,10 +211,10 @@ seller_Details *seller(seller_Details *seller_root_1, product_details *product_r
 							break;			
 					}
 				break;
-			case 3: 
+			case DISPLAY_SELLER: 
 				display(seller_root);
 				break;	
-			case 4: 
+			case EXIT: 
 				exit_flag = 1;
 				break;
 		}
