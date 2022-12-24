@@ -330,6 +330,11 @@ buyer_Details data_extraction_from_buyer_file(char *str ,buyer_Details DATA)
 }
 
 
+/******************************************************************
+FUNCTION NAME             :         create_list_buyer
+DISCRIPRION               :         This function is used here to create a linked list for buyer
+RETURN                    :         DATA
+******************************************************************/
 buyer_Details *create_list_buyer(buyer_Details *source , buyer_Details DATA) 
 {
 	if(source == NULL)
@@ -368,6 +373,11 @@ buyer_Details *create_list_buyer(buyer_Details *source , buyer_Details DATA)
 return source;
 }
 
+/******************************************************************
+FUNCTION NAME             :         get_the_product_detail
+DISCRIPRION               :         This function is used here to get the product details
+RETURN                    :         product id with seller details
+******************************************************************/
 
 product_details *get_the_product_detail(seller_Details * p ,int prod_id)
 {
