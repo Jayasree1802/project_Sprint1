@@ -22,7 +22,7 @@ void auction_for_product(product_details *prod_root , seller_Details *seller_roo
 	if(fptr == NULL)
 	{	
 		printf("%s opening is failed\n",transcation);
-		return ;
+		
 	}
 	
 	
