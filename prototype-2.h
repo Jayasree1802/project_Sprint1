@@ -8,6 +8,20 @@
 #define SELLER 3
 #define EXIT   0
 
+//Defining macros for seller menu
+#define REGISTRATION 1
+#define LOGIN    2
+#define DISPLAY  3
+
+//Defining macros for product menu
+
+#define PRODUCT_REGISTRATION 1
+#define DELETE_PRODUCTS 2
+#define MODIFY_PRODUCTS  3
+#define DISPLAY_PRODUCTS 4
+
+
+
 //struct Details of seller details
 typedef struct seller_Details
 {
@@ -16,23 +30,12 @@ typedef struct seller_Details
         char emailId[50];
         long int phoneNo;
         char panNo[10];
-        int product_id;
-        char product_name[20];
-        char product_details[30];
-        char category[20];
         char password[20];
-        int base_price;
-        int sold_price ;
-        int product_status ;
-        int choice;
-        int code;
-        int buyer_id_request[10];
-        int buyer_request_amount[10];
-        char buyer_name[30];
+       // int buyer_id_request[10];
+        //int buyer_request_amount[10];
         int count;
-        int buyer_id_sell ;
+        //int buyer_id_sell ;
 
-	
 	struct product_details *link;
         struct seller_Details *next;
 }seller_Details;
