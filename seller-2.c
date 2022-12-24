@@ -121,7 +121,7 @@ product_details *get_prodouct_seller_id(product_details *p , int seller_id)
 			{
 				//printf("seller id is %d\n",p->seller_id);
 				
-				printf("address %p\n",p);
+				
 				return p;
 			}
 			
@@ -225,7 +225,7 @@ return seller_root;
 		
 	}
 }
-seller_Details *create_lisr_of_seller(seller_Details *source_1 , seller_Details DATA)
+seller_Details *create_list_of_seller(seller_Details *source_1 , seller_Details DATA)
 {
 
 	
@@ -408,7 +408,7 @@ seller_Details *file_to_list(seller_Details *seller_root_1)
 	return seller_root;
 }
 
-seller_Details question_extraction_from_file(char *str , seller_Details q_data)
+seller_Details Data_extraction_from_file(char *str , seller_Details q_data)
 {
 	
 	
