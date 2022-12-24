@@ -1,6 +1,12 @@
 
 #include<stdio.h>
+
+//defining macros for main menu
 #define BUFFER_SIZE 1000
+#define ADMIN 1
+#define BUYER 2
+#define SELLER 3
+#define EXIT   0
 
 //struct Details of seller details
 typedef struct seller_Details
