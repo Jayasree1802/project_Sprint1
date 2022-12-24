@@ -50,7 +50,9 @@ void display_buyer(buyer_Details *source)
 }
 /*******************************************
 FUNCTION NAME             :      display_product
-
+DISCRIPTION               :      This function used here to display the details of buyer
+RETURN                    :       No return
+*******************************************/
 void display_productlis(seller_Details *seller_root)
 {
 	seller_Details *p = seller_root ;
@@ -64,6 +66,12 @@ void display_productlis(seller_Details *seller_root)
 	}
 	
 }
+/****************************************************
+FUNCTION NAME       :     buyer
+DISCRIPTION         :     This function is used here to show the  menu for the registration and login
+RETURN              :     source
+******************************************************/
+
 buyer_Details *buyer(buyer_Details *source , seller_Details *seller_root)
 {
 	int ch , exit_flag = 0 , prod_id = 0 , num = 0; 
@@ -139,7 +147,11 @@ buyer_Details *buyer(buyer_Details *source , seller_Details *seller_root)
 	}
 return source ;
 }
-
+/*********************************************
+FUNCTION                 :      registration_buyer
+DESCRIPTION              :      This function used here  for the registration
+RETURN                   :       source
+**********************************************/
 buyer_Details *registration_buyer(buyer_Details *source)
 {
 	
@@ -175,6 +187,11 @@ buyer_Details *registration_buyer(buyer_Details *source)
 return source;
 }
 
+/***********************************************
+FUNCTION NAME             :     buyer_login
+DESCRIPTION               :     This function used here compare the user name and password of buyer 
+RETURN                    :     buyer details
+***********************************************/
 buyer_Details *buyer_login(buyer_Details *source,char *user_name , char *pswd)
 {
 	buyer_Details *p = source ;
@@ -202,9 +219,13 @@ buyer_Details *buyer_login(buyer_Details *source,char *user_name , char *pswd)
 	
 	if(flag == 0)
 	 return NULL ;
-}	
+}
 
-
+/********************************************************
+FUNCTION NAME            :        writing_buyer_info_to_file
+DISCRIPTION              :        This function used here to save the buyer details into the file 
+RETURN                   :         No return
+********************************************************/
 void writing_buyer_info_to_file()
 {
 	char *str = "buyer_info.txt" ;
@@ -250,6 +271,12 @@ void writing_buyer_info_to_file()
 	
 	fclose(fptr);
 }
+
+/******************************************************************
+FUNCTION NAME             :         data_extraction_from_buyer_file
+DISCRIPRION               :         This function is used here to extraction of buyer details tofrom file 
+RETURN                    :         DATA
+******************************************************************/
 
 buyer_Details data_extraction_from_buyer_file(char *str ,buyer_Details DATA)
 {
