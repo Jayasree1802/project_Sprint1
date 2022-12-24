@@ -14,12 +14,12 @@ void design()
 }
 
 /************************************************************
-*FUNCTION NAME         :    main
+*FUNCTION NAME         :    displaymenu
 *DESCRIPTION           :    This function used here is the menu drawn function for admin,seller,buyer
 *RETURN                :    No return
 **************************************************************/
 
-int main()
+int displaymenu()
 {
 
 	seller_Details *seller_root = NULL;
@@ -44,17 +44,17 @@ int main()
 		
 		switch(ch)
 		{
-			case 1: 
+			case ADMIN: 
 				admin();
 				break;
-			case 2: 
+			case BUYER: 
 				buyer_root = buyer(buyer_root,seller_root);
 				break ;
-			case 3: 
+			case SELLER: 
 				seller_root = seller(seller_root , product_root);
 				printf("product add is %p\n",product_root);
 				break ;
-			case 4:
+			case EXIT:
 				exit(0); 
 				break ;
 		}
