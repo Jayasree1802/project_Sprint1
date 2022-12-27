@@ -7,6 +7,7 @@
 /****************************************************
 *FUNCTION NAME            :     save_to_file
 *DISCRIPTION              :     This function used here to save the buyer details into the file 
+*PARAMETERS               :     buyer_Details with source
 *RETURN                   :     No return 
 ***************************************************/
 void save_to_file(buyer_Details *source)
@@ -149,7 +150,7 @@ return source ;
 }
 /*********************************************
 FUNCTION                 :      registration_buyer
-DESCRIPTION              :      This function used here  for the registration
+DESCRIPTION              :      This function used here  for the registration of the buyer
 RETURN                   :       source
 **********************************************/
 buyer_Details *registration_buyer(buyer_Details *source)
@@ -189,8 +190,8 @@ return source;
 
 /***********************************************
 FUNCTION NAME             :     buyer_login
-DESCRIPTION               :     This function used here compare the user name and password of buyer 
-RETURN                    :     buyer details
+DESCRIPTION               :     This function used here login for the buyer using the user name and password of buyer 
+RETURN                    :     buyer_Details
 ***********************************************/
 buyer_Details *buyer_login(buyer_Details *source,char *user_name , char *pswd)
 {
@@ -274,7 +275,7 @@ void writing_buyer_info_to_file()
 
 /******************************************************************
 FUNCTION NAME             :         data_extraction_from_buyer_file
-DISCRIPRION               :         This function is used here to extraction of buyer details tofrom file 
+DISCRIPRION               :         This function is used here to extraction of buyer details from file 
 RETURN                    :         DATA
 ******************************************************************/
 
