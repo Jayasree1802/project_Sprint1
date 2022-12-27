@@ -1,4 +1,4 @@
-// definition file for client
+// client1 file
 
 //header files
 
