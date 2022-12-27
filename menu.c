@@ -1,10 +1,16 @@
+//header files
+
 #include<stdio.h>
 #include<stdlib.h>
 #include"prototype.h"
 #include"buyer_prototype.h"
 
-
-
+/*******************************************************************************************
+**  FUNCTION NAME   : design
+**  DESCRIPTION     : It is the function to print design 
+**  PARAMETERS      : No parameters
+**  RETURN          :  No Return 
+*******************************************************************************************/
 void design()
 {
 	for(int i = 0 ; i <30 ; i++)
