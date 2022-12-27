@@ -1,3 +1,6 @@
+//definition file for auction
+//header files
+
 #include<stdio.h>
 #include<string.h>
 #include"prototype.h"
@@ -6,6 +9,7 @@
 /******************************************************
 FUNCTION NAME       :        auction_for_product
 DISCRIPTION         :        This function used here  to create a file to store the bidding history 
+PARAMETERS          :        Structure prooduct_details with variable prod_root,seller_details with seller_root,buyer_Details with buyer_root
 RETURN              :        Return Null
 *******************************************************/
 void auction_for_product(product_details *prod_root , seller_Details *seller_root , buyer_Details *buyer_root)
